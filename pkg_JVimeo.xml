@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5" method="upgrade">
+	<name>JVimeo</name>
+	<packagename>JVimeo</packagename>
+	<version>1.0.0</version>
+	<url>http://ivan.ramos.name</url>
+	<packager>Iván Ramos Jiménez</packager>
+	<packagerurl>http://ivan.ramos.name</packagerurl>
+	<description>JVimeo - Vimeo for Joomla</description>
+	<files folder="packages">				
+		<file type="component" id="com_jvimeo">com_jvimeo.zip</file>
+	</files>
+	<updateservers>
+		<server type="collection" priority="1" name="JVimeo Update Site">http://ivan.ramos.name/updates/jvimeo-update-list.xml</server>
+	</updateservers>
+</extension>

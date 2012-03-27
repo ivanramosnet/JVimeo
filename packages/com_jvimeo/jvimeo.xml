@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>JVimeo</name>
+    <author>Iván Ramos Jiménez</author>
+    <creationDate>01/04/2012</creationDate>
+    <license>GNU/GPL</license>
+    <authorEmail>info@ivan.ramos.name</authorEmail>
+	<authorUrl>http://ivan.ramos.name</authorUrl>
+    <version>1.0.0</version>
+    <description>COM_JVIMEO_XML_DESCRIPTION</description>
+	
+	<files folder="site">
+		<filename>index.html</filename>
+	</files>
+	
+	<media destination="com_jvimeo" folder="media/com_jvimeo">
+		<filename>index.html</filename>
+	</media>
+    
+    <administration>
+		<menu>COM_JVIMEO_MENU</menu>
+		<submenu>
+			<menu link="option=com_jvimeo&amp;view=videos" view="videos"
+				alt="JVimeo/Videos">COM_JVIMEO_SUBMENU_VIDEOS</menu>
+			<menu link="option=com_jvimeo&amp;view=albums" view="albums"
+				alt="JVimeo/Albums">COM_JVIMEO_SUBMENU_ALBUMS</menu>
+			<menu link="option=com_jvimeo&amp;view=groups" view="groups"
+				alt="JVimeo/Groups">COM_JVIMEO_SUBMENU_GROUPS</menu>
+			<menu link="option=com_jvimeo&amp;view=channels" view="channels"
+				alt="JVimeo/Channels">COM_JVIMEO_SUBMENU_CHANNELS</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>jvimeo.php</filename>
+			<folder>helpers</folder>
+			<folder>help</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_jvimeo.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_jvimeo.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
