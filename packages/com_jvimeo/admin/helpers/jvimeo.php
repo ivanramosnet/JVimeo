@@ -4,11 +4,11 @@
  * 
  * Vimeo for Joomla
  * 
- * @author		Iván Ramos Jiménez
- * @package		Joomla.Administrator
- * @subpackage	com_jvimeo
- * @copyright	Copyright (C) 2011-2012 Iván Ramos Jiménez. All rights reserved.
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Administrator
+ * @subpackage  com_jvimeo
+ * @author      Iván Ramos <info@ivan.ramos.name>
+ * @copyright   Copyright (C) 2011-2012 Iván Ramos Jiménez. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  *
  */
 
@@ -18,17 +18,20 @@ defined('_JEXEC') or die;
 /**
  * JVimeo helper.
  *
- * @package		Joomla.Administrator
- * @subpackage	com_jvimeo
- * @since		1.0
+ * @package     Joomla.Administrator
+ * @subpackage  com_jvimeo
+ * @since       1.0
  */
 class JVimeoHelper
 {
 	/**
 	 * Configure the Linkbar.
 	 *
-	 * @param	string	The name of the active view.
+	 * @param   string  $vName  The name of the active view.
+	 * 
 	 * @since	1.0
+	 * 
+	 * @return null
 	 */
 	public static function addSubmenu($vName = 'jvimeo')
 	{
@@ -57,18 +60,22 @@ class JVimeoHelper
 				'index.php?option=com_jvimeo&view=channels',
 				$vName == 'channels'
 		);
-		if ($vName=='jvimeo') {
+		if ($vName == 'jvimeo')
+		{
 			JToolBarHelper::title(
 					JText::sprintf('COM_JVIMEO_JVIMEO_TITLE', JText::_('com_jvimeo')),
-					'jvimeo');
+					'jvimeo'
+			);
 		}
 	}
 
 	/**
 	 * Gets a list of the actions that can be performed.
 	 *
-	 * @param	int		The category ID.
-	 * @return	JObject
+	 * @param   int  $categoryId  The category ID.
+	 * 
+	 * @return  JObject
+	 * 
 	 * @since	1.0
 	 */
 	public static function getActions($categoryId = 0)
@@ -76,9 +83,6 @@ class JVimeoHelper
 		$user	= JFactory::getUser();
 		$result	= new JObject;
 
-		
-
 		return $result;
 	}
 }
-?>
