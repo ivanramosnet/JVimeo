@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="component"
+		label="COM_JVIMEO_COMPONENT_LABEL"
+		description="COM_JVIMEO_COMPONENT_DESC"
+	>
+		<field name="url" type="url" default="http://vimeo.com/api/rest/v2"
+			label="JVIMEO_FIELD_URL_LABEL"
+			description="JVIMEO_FIELD_URL_DESC" />
+		<field name="consumer_key" type="text" default=""
+			label="JVIMEO_FIELD_CONSUMER_KEY_LABEL"
+			description="JVIMEO_FIELD_CONSUMER_KEY_DESC"
+			filter="string" />
+		<field name="consumer_secret" type="text" default=""
+			label="JVIMEO_FIELD_CONSUMER_SECRET_LABEL"
+			description="JVIMEO_FIELD_CONSUMER_SECRET_LABEL"
+			filter="string" />
+	</fieldset>
+</config>
