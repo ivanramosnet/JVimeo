@@ -21,6 +21,9 @@ if (!JFactory::getUser()->authorise('core.manage', 'com_jvimeo'))
 	return JError::raiseWarning(404, JText::_('JERROR_ALERTNOAUTHOR'));
 }
 
+// Register helper class
+JLoader::register('VimeoHelper', dirname(__FILE__) . '/helpers/vimeo.php');
+
 // Include dependancies
 jimport('joomla.application.component.controller');
 

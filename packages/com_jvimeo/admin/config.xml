@@ -10,7 +10,15 @@
 			filter="string" />
 		<field name="consumer_secret" type="text" default=""
 			label="JVIMEO_FIELD_CONSUMER_SECRET_LABEL"
-			description="JVIMEO_FIELD_CONSUMER_SECRET_LABEL"
+			description="JVIMEO_FIELD_CONSUMER_SECRET_DESC"
+			filter="string" />
+		<field name="access_token" type="text" default=""
+			label="JVIMEO_FIELD_ACCESS_TOKEN_LABEL"
+			description="JVIMEO_FIELD_ACCESS_TOKEN_DESC"
+			filter="string" />
+		<field name="access_token_secret" type="text" default=""
+			label="JVIMEO_FIELD_ACCESS_TOKEN_SECRET_LABEL"
+			description="JVIMEO_FIELD_ACCESS_TOKEN_SECRET_DESC"
 			filter="string" />
 	</fieldset>
 </config>

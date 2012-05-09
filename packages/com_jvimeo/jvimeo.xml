@@ -31,11 +31,13 @@
 		</submenu>
 		<files folder="admin">
 			<filename>controller.php</filename>
+			<filename>config.xml</filename>
 			<filename>index.html</filename>
 			<filename>jvimeo.php</filename>
 			<folder>helpers</folder>
 			<folder>help</folder>
 			<folder>views</folder>
+			<folder>models</folder>
 		</files>
 		<languages folder="admin">
 			<language tag="en-GB">language/en-GB/en-GB.com_jvimeo.ini</language>
