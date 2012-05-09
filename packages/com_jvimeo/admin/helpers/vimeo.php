@@ -13,7 +13,7 @@
  */
 
 /**
- * Helper PhpVimeo
+ * Helper Vimeo
  * 
  * @package     Joomla.Administrator
  * @subpackage  com_jvimeo
@@ -21,7 +21,7 @@
  * @since       1.0
  *
  */
-class PhpVimeoHelper
+class VimeoHelper
 {
 	const API_REST_URL = 'http://vimeo.com/api/rest/v2';
 	const API_AUTH_URL = 'http://vimeo.com/oauth/authorize';
@@ -637,7 +637,7 @@ class PhpVimeoHelper
 	{
 		if (is_array($input))
 		{
-			return array_map(array('phpVimeo', 'url_encode_rfc3986'), $input);
+			return array_map(array('VimeoHelper', 'url_encode_rfc3986'), $input);
 		}
 		elseif (is_scalar($input))
 		{
