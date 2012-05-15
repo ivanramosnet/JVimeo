@@ -300,7 +300,8 @@ class VimeoHelper
 			}
 			elseif ($response->err)
 			{
-				throw new VimeoAPIException($response->err->msg, $response->err->code);
+				JError::raiseError($response->err->code, $response->err->msg);
+				
 			}
 			return false;
 		}
@@ -446,8 +447,9 @@ class VimeoHelper
 
 		if ($session_store)
 		{
-			$_SESSION["{$type}_token"] = $token;
-			$_SESSION["{$type}_token_secret"] = $token_secret;
+			$session = JFactory::getSession();
+			$session->set("{$type}_token", $token);
+			$session->set("{$type}_token_secret", $token_secret);
 		}
 
 		return true;
@@ -606,7 +608,7 @@ class VimeoHelper
 		}
 		elseif ($complete->err)
 		{
-			throw new VimeoAPIException($complete->err->msg, $complete->err->code);
+			JError::raiseError($complete->err->code, $complete->err->msg);
 		}
 	}
 
