@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_montage</name>
+	<author>Iván Ramos Jiménez</author>
+	<creationDate>May 2012</creationDate>
+	<copyright>Copyright (C) 2012 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@ivan.ramos.name</authorEmail>
+	<authorUrl>ivan.ramos.name</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_MONTAGE_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_montage">mod_montage.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>mod_montage.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_montage.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_montage.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="user"
+					type="text"
+					default=""
+					label="MOD_MONTAGE_FIELD_USER_LABEL"
+					description="MOD_MONTAGE_FIELD_USER_DESC" />
+				<field
+					name="badge_stream"
+					type="list"
+					default="uploaded"
+					label="MOD_MONTAGE_FIELD_STREAM_LABEL"
+					description="MOD_MONTAGE_FIELD_STREAM_DESC">
+					<option
+						value="uploaded">MOD_MONTAGE_FIELD_VALUE_VIDEOS</option>
+					<option
+						value="all">MOD_MONTAGE_FIELD_VALUE_ALL</option>
+					<option
+						value="group">MOD_MONTAGE_FIELD_VALUE_GROUP</option>
+					<option
+						value="channel">MOD_MONTAGE_FIELD_VALUE_CHANNEL</option>
+					<option
+						value="album">MOD_MONTAGE_FIELD_VALUE_ALBUM</option>
+				</field>
+				<field
+					name="stream_id"
+					type="text"
+					default=""
+					label="MOD_MONTAGE_FIELD_STREAM_ID_LABEL"
+					description="MOD_MONTAGE_FIELD_STREAM_ID_DESC" />
+				<field
+					name="badge_layout"
+					type="list"
+					default="horizontal"
+					label="MOD_MONTAGE_FIELD_BADGE_LAYOUT_LABEL"
+					description="MOD_MONTAGE_FIELD_BADGE_LAYOUT_DESC">
+					<option
+						value="horizontal">MOD_MONTAGE_FIELD_VALUE_BADGE_LAYOUT_HORIZONTAL</option>
+					<option
+						value="vertical">MOD_HUBNUT_FIELD_VALUE_BADGE_LAYOUT_VERTICAL</option>
+				</field>
+				<field
+					name="badge_quantity"
+					type="integer"
+					default="6"
+					first="1"
+					last="9"
+					step="1"
+					label="MOD_MONTAGE_FIELD_BADGE_QUANTITY_LABEL"
+					description="MOD_MONTAGE_FIELD_BADGE_QUANTITY_DESC" />
+				<field
+					name="show_titles"
+					type="radio"
+					default="no"
+					label="MOD_MONTAGE_FIELD_SHOW_TITLES_LABEL"
+					description="MOD_MONTAGE_FIELD_SHOW_TITLES_DESC">
+					<option
+						value="no">MOD_MONTAGE_FIELD_VALUE_SHOW_TITLES_NO</option>
+					<option
+						value="yes">MOD_MONTAGE_FIELD_VALUE_SHOW_TITLES_YES</option>
+				</field>
+				<field
+					name="badge_size"
+					type="list"
+					default="80"
+					label="MOD_MONTAGE_FIELD_BADGE_SIZE_LABEL"
+					description="MOD_MONTAGE_FIELD_BADGE_SIZE_DESC">
+					<option
+						value="80">MOD_MONTAGE_FIELD_VALUE_BADGE_SIZE_80</option>
+					<option
+						value="100">MOD_MONTAGE_FIELD_VALUE_BADGE_SIZE_100</option>
+					<option
+						value="160">MOD_MONTAGE_FIELD_VALUE_BADGE_SIZE_160</option>
+					<option
+						value="200">MOD_MONTAGE_FIELD_VALUE_BADGE_SIZE_200</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
