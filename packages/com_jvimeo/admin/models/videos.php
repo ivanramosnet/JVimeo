@@ -27,12 +27,12 @@ class JVimeoModelVideos extends JModelList
 {
 
 	/**
-	 * Build an SQL query to load the list data.
+	 * Get a list of videos uploaded by a user.
 	 *
-	 * @return	JDatabaseQuery
+	 * @return	array
 	 * @since	1.6
 	 */
-	protected function getVideos()
+	public function getVideos()
 	{
 		$params = &JComponentHelper::getParams('com_jvimeo');
 		$vimeo = new VimeoHelper(
@@ -41,7 +41,7 @@ class JVimeoModelVideos extends JModelList
 				$params->get('access_token'),
 				$params->get('access_token_secret')
 		);
-		$videos = $vimeo->call('vimeo.videos.getUploaded', array('user_id' => 'ivanramosnet'));
+		$videos = $vimeo->call('vimeo.videos.getUploaded', array('user_id' => $params->get('user_id')));
 		return $videos;
 	}
 }
