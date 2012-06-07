@@ -4,21 +4,25 @@
 		label="COM_JVIMEO_COMPONENT_LABEL"
 		description="COM_JVIMEO_COMPONENT_DESC"
 	>
+		<field name="user_id" type="text" default=""
+			label="JVIMEO_FIELD_USER_ID_LABEL"
+			description="JVIMEO_FIELD_USER_ID_DESC"
+			filter="string" required="true"/>
 		<field name="consumer_key" type="text" default=""
 			label="JVIMEO_FIELD_CONSUMER_KEY_LABEL"
 			description="JVIMEO_FIELD_CONSUMER_KEY_DESC"
-			filter="string" />
+			filter="string" required="true"/>
 		<field name="consumer_secret" type="text" default=""
 			label="JVIMEO_FIELD_CONSUMER_SECRET_LABEL"
 			description="JVIMEO_FIELD_CONSUMER_SECRET_DESC"
-			filter="string" />
+			filter="string" required="true"/>
 		<field name="access_token" type="text" default=""
 			label="JVIMEO_FIELD_ACCESS_TOKEN_LABEL"
 			description="JVIMEO_FIELD_ACCESS_TOKEN_DESC"
-			filter="string" />
+			filter="string" required="true"/>
 		<field name="access_token_secret" type="text" default=""
 			label="JVIMEO_FIELD_ACCESS_TOKEN_SECRET_LABEL"
 			description="JVIMEO_FIELD_ACCESS_TOKEN_SECRET_DESC"
-			filter="string" />
+			filter="string" required="true"/>
 	</fieldset>
 </config>
